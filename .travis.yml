@@ -1,38 +1,18 @@
-language: node_js
+language: "node_js"
 node_js:
-  - "10"
-cache: npm
-
-notifications:
-  email:
-    recipients:
-      - Luozx99@163.com # 设置通知邮件
-    on_success: change
-    on_failure: always
-
+  - "node"
+before_install:
+  - find . -type f -name "*.md" ! -path "./README.md" -a ! -path "./SUMMARY.md"|xargs -i sed -ri '/^<extoc>/d;0,/^## /s/(^## .*)/\n<extoc><\/extoc>\n\n\1/' '{}'
 install:
-  - npm install -g gitbook-cli
-  - gitbook install
-
-script:
-  - gitbook build
-
-after_script:
-  - cd _book
-  - git init
-  - git remote add origin https://${REF}
-  - git add .
-  - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages"
-  - git push --force --quiet "https://${TOKEN}@${REF}" master:gh-pages
-
+  - "npm install -g gitbook@3.2.3"
+  - "npm install -g gitbook-cli@2.3.2"
 branches:
   only:
     - master
-
 env:
   global:
-    - REF=github.com/Luozx99/Luozxblog.github.io.git # 设置 github 地址
-    
+    - GH_REF: github.com/Luozx99/Luozxblog.github.io.git
+#sudo: false
 script:
   - bash summary_create.sh
   - travis_wait 100 bash deploy.sh
