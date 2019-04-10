@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git config user.name "KunBlog"
-git config user.email "lyon547903993@gmail.com"
+git config user.name "Luozxzzz"
+git config user.email "Luozx99@163.com"
 git config --global core.quotepath false
 
 git checkout -b gitbook
