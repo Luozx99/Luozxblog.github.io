@@ -11,7 +11,7 @@ branches:
     - master
 env:
   global:
-    - GH_REF: github.com/KunBlog/blog.git
+    - GH_REF: github.com/Luozx99/Luozxblog.github.io.git
 #sudo: false
 script:
   - bash summary_create.sh
