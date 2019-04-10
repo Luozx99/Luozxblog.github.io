@@ -41,10 +41,10 @@
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/KunBlog/blog"
+            "url": "https://github.com/Luozx99/Luozxblog.github.io.git"
         },
         "editlink": {
-            "base": "https://github.com/KunBlog/blog/blob/master",
+            "base": "https://github.com/Luozx99/Luozxblog.github.io/blob/master",
             "label": "编辑本页"
         },
         "anchor-navigation-ex-toc": {
