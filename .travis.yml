@@ -32,3 +32,7 @@ branches:
 env:
   global:
     - REF=github.com/Luozx99/Luozxblog.github.io.git # 设置 github 地址
+    
+script:
+  - bash summary_create.sh
+  - travis_wait 100 bash deploy.sh
