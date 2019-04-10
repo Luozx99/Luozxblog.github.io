@@ -22,5 +22,5 @@ git status
 sleep 5
 git add .
 git commit -m "Update gh-pages"
-git remote add origin git@github.com:KunBlog/blog.git
+git remote add origin git@github.com:Luozx99/Luozxblog.github.io.git
 git push -f "https://${GH_TOKEN}@${GH_REF}" gh-pages:gh-pages
